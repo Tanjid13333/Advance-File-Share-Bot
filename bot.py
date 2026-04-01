@@ -1,4 +1,6 @@
 import asyncio
+asyncio.set_event_loop(asyncio.new_event_loop())
+
 import logging
 import logging.config
 
@@ -87,7 +89,6 @@ class Bot(Client):
                 yield message
                 current += 1
 
-asyncio.set_event_loop(asyncio.new_event_loop())
 
 app = Bot()
 app.run()
